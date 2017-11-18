@@ -5,6 +5,7 @@ from folium import plugins
 import datetime
 from datetime import datetime
 from dateutil.parser import parse
+from folium.plugins import HeatMap
 
 
 def parse_float(x):
@@ -62,6 +63,13 @@ NY_map.save('map.html')
 NY_map
 
 
+hmap = folium.Map(location=[40.657, -73.947],
+                  tiles='https://api.mapbox.com/styles/v1/nickszhu/cja4ybeod31lc2roeya5ijuxb/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg', attr='nick', zoom_start=15)
+
+
+hmap.add_child(HeatMap(position))
+hmap.save('hmap.html')
+hmap
 
 
 
