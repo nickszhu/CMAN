@@ -1,7 +1,5 @@
 import pandas as pd 
 import numpy as np
-import folium
-from folium import plugins
 import datetime
 from datetime import datetime
 from dateutil.parser import parse
@@ -15,7 +13,7 @@ def parse_float(x):
 	return x
 
 
-data = pd.read_csv("datasets/NYC-vehicle-collisions.csv", low_memory=False)
+data = pd.read_csv("../datasets/NYC-vehicle-collisions.csv", low_memory=False)
 df = pd.DataFrame(data)
 
 
@@ -40,12 +38,24 @@ print("Accidents in 2016\n{0}".format(data16['BOROUGH'].value_counts()))
 print("Accidents in 2017\n{0}".format(data17['BOROUGH'].value_counts()))
 
 
+import matplotlib
+import matplotlib.pyplot as plt
+#cross streets with accidents > 10
+accNumOnStreet = data17.groupby(['ON STREET NAME', 'CROSS STREET NAME', 'LOCATION']).size()
+accNumGreater12 = accNumOnStreet[accNumOnStreet>0]
+print("accidents number greater than 10\n{0}".format(accNumGreater12))
 
-#morning_rush = last_year[(last_year["date"].dt.weekday < 5) & 
-#			   (last_year["date"].dt.hour > 5) & (last_year["date"].dt.hour < 10)]
-#print(morning_rush.shape)
-#last_year.shape
+from ast import literal_eval
+for index, row in accNumGreater12.iteritems():
+	location = literal_eval(index[2])
+	plt.scatter(parse_float(location[0]), parse_float(location[1]), s=0.5)
+plt.show()
+
+
+
 import math
+import folium
+from folium import plugins
 
 position = []
 NY_map = folium.Map(location=[40.657, -73.947], zoom_start=11, tiles='https://api.mapbox.com/styles/v1/nickszhu/cja4ybeod31lc2roeya5ijuxb/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg', attr='nick')
