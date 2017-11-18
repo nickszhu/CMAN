@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+        integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
+        <style>
+            #mapid { height: 500px; }
+        </style>
+    </head>
+    <body>
+        <div id="mapid"></div>
+    </body>
+    <script>
+        
+        var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
+            denver    = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
+            aurora    = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
+            golden    = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
+
+        var cities = L.layerGroup([littleton, denver, aurora, golden]);
+        var grayscale = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                            maxZoom: 18,
+                            id: 'mapbox.satellite',
+                            accessToken: 'pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg'
+                        }),
+            streets   = L.tileLayer('https://api.mapbox.com/styles/v1/nickszhu/cja4ybeod31lc2roeya5ijuxb/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg', {
+                            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                            maxZoom: 18,
+                            id: 'mapbox://styles/nickszhu/cja4ybeod31lc2roeya5ijuxb',
+                            accessToken: 'pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg'
+                        });
+
+        var map = L.map('mapid', {
+            center: [39.73, -104.99],
+            zoom: 10,
+            layers: [grayscale, cities]
+        });
+
+        var baseMaps = {
+            "Grayscale": grayscale,
+            "Streets": streets
+        };
+
+        var overlayMaps = {
+            "Cities": cities
+        };
+        L.control.layers(baseMaps, overlayMaps).addTo(map);
+    </script>
+</html>
