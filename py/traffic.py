@@ -13,7 +13,7 @@ def parse_float(x):
 	return x
 
 
-data = pd.read_csv("../datasets/NYC-vehicle-collisions.csv", low_memory=False)
+data = pd.read_csv("datasets/NYC-vehicle-collisions.csv", low_memory=False)
 df = pd.DataFrame(data)
 
 
@@ -38,19 +38,6 @@ print("Accidents in 2016\n{0}".format(data16['BOROUGH'].value_counts()))
 print("Accidents in 2017\n{0}".format(data17['BOROUGH'].value_counts()))
 
 
-import matplotlib
-import matplotlib.pyplot as plt
-#cross streets with accidents > 10
-accNumOnStreet = data15.groupby(['ON STREET NAME', 'CROSS STREET NAME', 'LOCATION']).size()
-accNumGreater12 = accNumOnStreet[accNumOnStreet>5]
-print("accidents number greater than 10\n{0}".format(accNumGreater12))
-
-from ast import literal_eval
-for index, row in accNumGreater12.iteritems():
-	location = literal_eval(index[2])
-	plt.scatter(parse_float(location[0]), parse_float(location[1]), s=0.5)
-plt.show()
-
 
 
 import math
@@ -58,9 +45,9 @@ import folium
 from folium import plugins
 
 position = []
-NY_map = folium.Map(location=[40.657, -73.947], zoom_start=11, tiles='https://api.mapbox.com/styles/v1/nickszhu/cja4ybeod31lc2roeya5ijuxb/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg', attr='nick')
+NY_map = folium.Map(location=[40.657, -73.947], zoom_start=11, tiles='https://api.mapbox.com/styles/v1/nickszhu/cja4ybeod31lc2roeya5ijuxb/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibmlja3N6aHUiLCJhIjoiY2phNHdhd3hvMWNxNjMybGZjdTZvd2g1MCJ9.Oqaq80B5Gnr5amdoZOGYSg', attr='2016')
 #marker_cluster = plugins.MarkerCluster().add_to(NY_map)
-for index, row in data15[0:50000].iterrows():
+for index, row in data16[0:10000].iterrows():
 	lon = parse_float(row["LONGITUDE"])
 	lat = parse_float(row["LATITUDE"])
 	if not math.isnan(lon) and not math.isnan(lat):
@@ -68,7 +55,7 @@ for index, row in data15[0:50000].iterrows():
 		position.append([lat, lon])
 
 plugins.MarkerCluster(position).add_to(NY_map)
-NY_map.save('maps/map15_50000.html')
+NY_map.save('maps/map16_10000.html')
 NY_map
 
 
