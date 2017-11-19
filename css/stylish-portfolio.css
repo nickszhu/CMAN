@@ -34,7 +34,7 @@ body {
 .btn-dark {
   color: #fff;
   border: none;
-  border-radius: 0;
+  border-radius: 5;
   background-color: rgba(0, 0, 0, .4);
 }
 

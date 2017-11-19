@@ -1,0 +1,57 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         ENTRIES_hourly   R-squared:                       0.499
+Model:                            OLS   Adj. R-squared:                  0.493
+Method:                 Least Squares   F-statistic:                     87.50
+Date:                Sun, 19 Nov 2017   Prob (F-statistic):           7.66e-15
+Time:                        00:37:45   Log-Likelihood:                -293.41
+No. Observations:                  90   AIC:                             590.8
+Df Residuals:                      88   BIC:                             595.8
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     12.3763      0.802     15.426      0.000      10.782      13.971
+temp           0.0236      0.003      9.354      0.000       0.019       0.029
+==============================================================================
+Omnibus:                        3.712   Durbin-Watson:                   1.122
+Prob(Omnibus):                  0.156   Jarque-Bera (JB):                3.508
+Skew:                           0.420   Prob(JB):                        0.173
+Kurtosis:                       2.519   Cond. No.                         379.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+
+
+
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         ENTRIES_hourly   R-squared:                       0.779
+Model:                            OLS   Adj. R-squared:                  0.774
+Method:                 Least Squares   F-statistic:                     153.5
+Date:                Sun, 19 Nov 2017   Prob (F-statistic):           2.91e-29
+Time:                        00:37:45   Log-Likelihood:                -256.50
+No. Observations:                  90   AIC:                             519.0
+Df Residuals:                      87   BIC:                             526.5
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      8.2917      0.662     12.534      0.000       6.977       9.606
+temp           0.0013      0.003      0.471      0.639      -0.004       0.007
+rain           0.5488      0.052     10.515      0.000       0.445       0.652
+==============================================================================
+Omnibus:                        1.431   Durbin-Watson:                   1.541
+Prob(Omnibus):                  0.489   Jarque-Bera (JB):                1.159
+Skew:                           0.020   Prob(JB):                        0.560
+Kurtosis:                       2.446   Cond. No.                         470.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
