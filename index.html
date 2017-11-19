@@ -29,14 +29,11 @@
     </a>
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+        <a id="menu-close" href="#" class="btn btn-light btn-sm pull-right toggle">
           <i class="fa fa-times"></i>
         </a>
         <li class="sidebar-brand">
           <a class="js-scroll-trigger" href="#top">NYC Traffic Analysis</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#top">Home</a>
         </li>
         <li>
           <a class="js-scroll-trigger" href="#about">About Our Analysis</a>
@@ -48,7 +45,10 @@
           <a class="js-scroll-trigger" href="#subway">Subway and Weather</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+          <a class="js-scroll-trigger" href="#bike">Bike</a>
+        </li>
+        <li>
+          <a class="js-scroll-trigger" href="#contact" >Contact</a>
         </li>
       </ul>
     </nav>
@@ -72,8 +72,8 @@
       <!-- /.container -->
     </section>
 
-    <!-- Services -->
-    <section id="services" class="services bg-primary text-white">
+    <!-- Icons -->
+    <section id="" class="services bg-primary text-white">
       <div class="container">
         <div class="row text-center">
           <div class="col-lg-10 mx-auto">
@@ -84,42 +84,42 @@
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
 
-                    <a href="#collision"><i class="fa fa-circle fa-stack-2x"></i>
+                    <a class="js-scroll-trigger" href="#collision"><i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-automobile fa-stack-1x text-primary"></i></a>
 
                   </span>
                   <h4>
                     <strong>Traffic Collision</strong>
                   </h4>
-                  <p>TODO: description</p>
+                  
                 </div>
               </div>
               <div class="col-md-4 col-sm-8">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
 
-                    <a href="#subway"><i class="fa fa-circle fa-stack-2x"></i>
+                    <a class="js-scroll-trigger" href="#subway"><i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-subway fa-stack-1x text-primary"></i></a>
 
                   </span>
                   <h4>
                     <strong>NYC Subway</strong>
                   </h4>
-                  <p>TODO: description</p>
+                 
                 </div>
               </div>
               <div class="col-md-4 col-sm-8">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
 
-                    <a href="bike"><i class="fa fa-circle fa-stack-2x"></i>
+                    <a class="js-scroll-trigger" href="#bike"><i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-bicycle fa-stack-1x text-primary"></i></a>
 
                   </span>
                   <h4>
                     <strong>NYC Bike</strong>
                   </h4>
-                  <p>TODO: description</p>
+                  
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
-            <h4><b>Collision at The Same Place More Than 12 Times in 2015 &amp; 2016</b></h4>
+            <h4><b>Intersections with ≥12 Collisions in 2015 vs 2016</b></h4>
             <hr class="medium">
           </div>
           <div class="col-md-6">
@@ -202,7 +202,7 @@
     </section>
 
     <!-- Subway -->
-    <section id="portfolio" class="portfolio">
+    <section id="subway" class="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
@@ -258,7 +258,7 @@
     </aside>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
@@ -269,7 +269,7 @@
               <li>Angela Li</li>
               <li>Mia Wang</li>
               <li>Chelsea Zhou</li>
-              <li>Nick Zhu</li>
+              <li><a href="https://github.com/nickszhu">Nick Zhu</a></li>
             </ul>
             <br>
             <ul class="list-inline">
