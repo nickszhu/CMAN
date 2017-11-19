@@ -45,7 +45,7 @@
           <a class="js-scroll-trigger" href="#collision">Traffic Collision</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="js-scroll-trigger" href="#subway">Subway and Weather</a>
         </li>
         <li>
           <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close").click();>Contact</a>
@@ -56,8 +56,8 @@
     <!-- Header -->
     <header class="header" id="top">
       <div class="text-vertical-center">
-        <h1>NYC Traffic Analysis</h1>
-        <h3>By NULLA &amp; CodeJam2017</h3>
+        <h1>NYC Transportation Analysis</h1>
+        <h3>By CMAN @ CodeJam2017</h3>
         <br>
         <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">Find Out More</a>
       </div>
@@ -83,9 +83,10 @@
               <div class="col-md-4 col-sm-8">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
-                    <a class="js-scroll-trigger" href="#collision">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-compass fa-stack-1x text-primary"></i></a>
+
+                    <a href="#collision"><i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-automobile fa-stack-1x text-primary"></i></a>
+
                   </span>
                   <h4>
                     <strong>Traffic Collision</strong>
@@ -96,9 +97,10 @@
               <div class="col-md-4 col-sm-8">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
-                    <a class="js-scroll-trigger" href="#subway">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-flask fa-stack-1x text-primary"></i></a>
+
+                    <a href="#subway"><i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-subway fa-stack-1x text-primary"></i></a>
+
                   </span>
                   <h4>
                     <strong>NYC Subway</strong>
@@ -109,9 +111,10 @@
               <div class="col-md-4 col-sm-8">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
-                    <a class="js-scroll-trigger" href="bike">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-shield fa-stack-1x text-primary"></i></a>
+
+                    <a href="bike"><i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bicycle fa-stack-1x text-primary"></i></a>
+
                   </span>
                   <h4>
                     <strong>NYC Bike</strong>
@@ -129,48 +132,76 @@
       <!-- /.container -->
     </section>
 
-    <!-- Callout -->
-    <aside class="callout">
-      <div class="text-vertical-center">
-        <h1>Vertically Centered Text</h1>
-      </div>
-    </aside>
-
     <!-- Collision -->
     <section class="portfolio" id="collision">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
-            <h4>NYC Traffic Collision Map in 2015</h4>
+            <h4>Collision Happened at The Same Place More Than 12 Times in 2015 &amp; 2016</h4>
             <hr class="medium">
           </div>
-          <div class="col-md-3">
-            <p><h5>TODO: description jkldkjslfkjdls jkdlskjfdslkj sjdklkfjdhjksjh jkldksjfkljdkjs jkldksjfksl djkflksjdklfkjds</h5></p>
+          <div class="col-md-6">
+            <p>2015 NYC Traffic Collision</p>
+            <img class="img-portfolio img-fluid" src="maps/accidentNumGreaterThan12_2015.png">
           </div>
           <div class="col-md-6">
+            <p>2016 NYC Traffic Collision</p>
+            <img class="img-portfolio img-fluid" src="maps/accidentNumGreaterThan12_2016.png">
+          </div>
+        </div>
+
+
+        <div>
+        <br>
+          <div class="col-lg-10 mx-auto text-center">
+            <h4>NYC Traffic Collision Clustered Conclusion</h4>
+            <hr class="medium">
+          </div>
+          <div class="col-md-6 mx-auto">
             <div class="portfolio-item">
-              <iframe src="maps/map15_10000.html" height="500" width="800" style="border:none;"></iframe>
+              <img class="img-portfolio img-fluid" src="maps/collision_cluster.png">
+            </div>
+          </div>
+          <div class="col-md-4 mx-auto text-center">
+            <p><h5>TODO: description jkldkjslfkjdls jkdlskjfdslkj sjdklkfjdhjksjh jkldksjfkljdkjs jkldksjfksl djkflksjdklfkjds</h5></p>
+          </div>
+          <div>
+
+        <br>    
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center">
+            <h4>NYC Traffic Collision Clustered Map in 2015</h4>
+            <hr class="medium">
+          </div>
+          <div class="col-md-4">
+            <p><h5>TODO: description jkldkjslfkjdls jkdlskjfdslkj sjdklkfjdhjksjh jkldksjfkljdkjs jkldksjfksl djkflksjdklfkjds</h5></p>
+          </div>
+          <div class="col-md-8">
+            <div class="portfolio-item">
+              <iframe src="maps/map15_10000.html"></iframe>
             </div>
           </div>
         </div>
+
         <div class="row">
             <div class="col-lg-10 mx-auto text-center">
-              <h4>NYC Traffic Collision Map in 2016</h4>
+              <h4>NYC Traffic Collision Clustered Map in 2016</h4>
               <hr class="medium">
             </div>
-            <div class="col-md-3">
-            <p><h5>TODO: description jkldkjslfkjdls jkdlskjfdslkj sjdklkfjdhjksjh jkldksjfkljdkjs jkldksjfksl djkflksjdklfkjds</h5></p>
-          </div>
-          <div class="col-md-6">
+            <div class="col-md-4">
+              <p><h5>TODO: description jkldkjslfkjdls jkdlskjfdslkj sjdklkfjdhjksjh jkldksjfkljdkjs jkldksjfksl djkflksjdklfkjds</h5></p>
+            </div>
+          <div class="col-md-8">
             <div class="portfolio-item">
-              <iframe src="maps/map16_10000.html" height="500" width="800" style="border:none;"></iframe>
+              <iframe src="maps/map16_10000.html"></iframe>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Portfolio -->
+    <!-- Subway -->
     <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="row">
@@ -226,22 +257,13 @@
       </div>
     </aside>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-      <br/>
-      <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-      </small>
-    </section>
-
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
             <h4>
-              <strong>NULLA - CodeJam2017</strong>
+              <strong>CMAN - CodeJam2017</strong>
             </h4>
             <ul class="list-unstyled">
               <li>Angela Li</li>
@@ -258,7 +280,7 @@
               </li>
             </ul>
             <hr class="small">
-            <p class="text-muted">Copyright &copy; CodeJam-NULLA 2017</p>
+            <p class="text-muted">Copyright &copy; CMAN-CodeJam2017</p>
           </div>
         </div>
       </div>
