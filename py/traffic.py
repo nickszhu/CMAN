@@ -41,8 +41,8 @@ print("Accidents in 2017\n{0}".format(data17['BOROUGH'].value_counts()))
 import matplotlib
 import matplotlib.pyplot as plt
 #cross streets with accidents > 10
-accNumOnStreet = data17.groupby(['ON STREET NAME', 'CROSS STREET NAME', 'LOCATION']).size()
-accNumGreater12 = accNumOnStreet[accNumOnStreet>0]
+accNumOnStreet = data15.groupby(['ON STREET NAME', 'CROSS STREET NAME', 'LOCATION']).size()
+accNumGreater12 = accNumOnStreet[accNumOnStreet>5]
 print("accidents number greater than 10\n{0}".format(accNumGreater12))
 
 from ast import literal_eval
