@@ -1,0 +1,62 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         ENTRIES_hourly   R-squared:                       0.008
+Model:                            OLS   Adj. R-squared:                  0.008
+Method:                 Least Squares   F-statistic:                     345.1
+Date:                Sun, 19 Nov 2017   Prob (F-statistic):           9.86e-77
+Time:                        00:22:12   Log-Likelihood:            -4.0113e+05
+No. Observations:               42649   AIC:                         8.023e+05
+Df Residuals:                   42647   BIC:                         8.023e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -87.5296    107.215     -0.816      0.414    -297.672     122.613
+temp          31.2837      1.684     18.577      0.000      27.983      34.584
+==============================================================================
+Omnibus:                    36346.644   Durbin-Watson:                   0.905
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          1111641.691
+Skew:                           4.067   Prob(JB):                         0.00
+Kurtosis:                      26.652   Cond. No.                         480.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+
+
+
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         ENTRIES_hourly   R-squared:                       0.025
+Model:                            OLS   Adj. R-squared:                  0.024
+Method:                 Least Squares   F-statistic:                     214.3
+Date:                Sun, 19 Nov 2017   Prob (F-statistic):          1.29e-226
+Time:                        00:22:12   Log-Likelihood:            -4.0077e+05
+No. Observations:               42649   AIC:                         8.015e+05
+Df Residuals:                   42643   BIC:                         8.016e+05
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept       279.5859    121.973      2.292      0.022      40.517     518.655
+temp             28.9827      1.767     16.400      0.000      25.519      32.446
+rain            225.4636     40.559      5.559      0.000     145.967     304.960
+windspeed        97.5465      4.473     21.806      0.000      88.779     106.314
+meanprecip     9075.0527   1048.315      8.657      0.000    7020.334    1.11e+04
+meanwindspeed  -142.9418      6.560    -21.788      0.000    -155.800    -130.083
+==============================================================================
+Omnibus:                    36539.377   Durbin-Watson:                   0.924
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          1145673.807
+Skew:                           4.090   Prob(JB):                         0.00
+Kurtosis:                      27.037   Cond. No.                     4.78e+03
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.78e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
